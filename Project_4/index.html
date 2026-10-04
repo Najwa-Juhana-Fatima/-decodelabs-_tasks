@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Form Validation | Project 4</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+    </div>
+
+    <main class="container">
+
+        <!-- LEFT INFORMATION PANEL -->
+        <section class="info-panel">
+
+            <div class="project-badge">
+                <span>⚡</span>
+                PROJECT 4
+            </div>
+
+            <h1>
+                Smart Form
+                <span>Validation</span>
+            </h1>
+
+            <p class="description">
+                A responsive form designed with JavaScript validation
+                to provide instant feedback and a smooth user experience.
+            </p>
+
+            <!-- Validation Features -->
+            <div class="features">
+
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h3>Input Validation</h3>
+                        <p>Checks user-entered information.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">!</div>
+                    <div>
+                        <h3>Error Handling</h3>
+                        <p>Shows clear messages for invalid inputs.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <div>
+                        <h3>Success Feedback</h3>
+                        <p>Confirms when the form is valid.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Status -->
+            <div class="validation-status">
+                <span class="status-dot"></span>
+                <span id="liveStatus">Ready for input</span>
+            </div>
+
+        </section>
+
+
+        <!-- FORM PANEL -->
+        <section class="form-card">
+
+            <div class="form-header">
+
+                <div>
+                    <span class="form-label">USER REGISTRATION</span>
+                    <h2>Create Your Account</h2>
+                </div>
+
+                <div class="form-icon">
+                    ✦
+                </div>
+
+            </div>
+
+
+            <form id="registrationForm" novalidate>
+
+                <!-- NAME -->
+                <div class="input-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">👤</span>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                        >
+
+                    </div>
+
+                    <small class="error-message" id="nameError"></small>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">✉</span>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+                    <small class="error-message" id="emailError"></small>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="input-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">☎</span>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter 10-digit phone number"
+                            maxlength="10"
+                            autocomplete="tel"
+                        >
+
+                    </div>
+
+                    <small class="error-message" id="phoneError"></small>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">🔒</span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            id="togglePassword"
+                            aria-label="Show password"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                    <small class="error-message" id="passwordError"></small>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">🔐</span>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password"
+                        >
+
+                    </div>
+
+                    <small class="error-message" id="confirmPasswordError"></small>
+
+                </div>
+
+
+                <!-- TERMS -->
+                <div class="terms">
+
+                    <label class="checkbox-container">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                        >
+
+                        <span class="custom-checkbox"></span>
+
+                        <span>
+                            I agree to the terms and conditions.
+                        </span>
+
+                    </label>
+
+                    <small
+                        class="error-message"
+                        id="termsError"
+                    ></small>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+
+                    <span>Validate & Submit</span>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <!-- SUCCESS MESSAGE -->
+                <div
+                    class="success-message"
+                    id="successMessage"
+                >
+
+                    <div class="success-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Form Submitted Successfully!</strong>
+                        <p>All inputs have been validated.</p>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <span>FRONTEND DEVELOPMENT</span>
+
+        <span class="footer-dot">•</span>
+
+        <span>PROJECT 4</span>
+
+        <span class="footer-dot">•</span>
+
+        <span>FORM DESIGN & VALIDATION</span>
+
+    </footer>
+
+</body>
+</html>
