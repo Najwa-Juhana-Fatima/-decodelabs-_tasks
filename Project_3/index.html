@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Web Elements</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Animated background -->
+    <div class="background">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+    </div>
+
+    <main class="container">
+
+        <!-- Header -->
+        <header class="hero">
+
+            <div class="badge">
+                ⚡ PROJECT 3
+            </div>
+
+            <h1>
+                Interactive
+                <span>Web Elements</span>
+            </h1>
+
+            <p>
+                A dynamic webpage powered by JavaScript,
+                DOM manipulation and interactive UI elements.
+            </p>
+
+            <div class="hero-line"></div>
+
+        </header>
+
+
+        <!-- Main interactive grid -->
+        <section class="cards">
+
+
+            <!-- Dynamic Message -->
+            <article class="card tilt-card">
+
+                <div class="card-icon">
+                    💬
+                </div>
+
+                <div class="card-content">
+
+                    <span class="card-label">
+                        DYNAMIC CONTENT
+                    </span>
+
+                    <h2>
+                        Message Generator
+                    </h2>
+
+                    <p id="message">
+                        Click the button and watch the content change.
+                    </p>
+
+                    <button id="messageBtn" class="primary-btn">
+                        <span>Change Message</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Counter -->
+            <article class="card tilt-card">
+
+                <div class="card-icon">
+                    🔢
+                </div>
+
+                <div class="card-content">
+
+                    <span class="card-label">
+                        USER INTERACTION
+                    </span>
+
+                    <h2>
+                        Click Counter
+                    </h2>
+
+                    <div class="counter" id="count">
+                        0
+                    </div>
+
+                    <p>
+                        Number of interactions
+                    </p>
+
+                    <div class="button-group">
+
+                        <button id="countBtn" class="primary-btn">
+                            + Add Click
+                        </button>
+
+                        <button id="resetBtn" class="secondary-btn">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Greeting -->
+            <article class="card tilt-card">
+
+                <div class="card-icon">
+                    👋
+                </div>
+
+                <div class="card-content">
+
+                    <span class="card-label">
+                        INPUT INTERACTION
+                    </span>
+
+                    <h2>
+                        Personal Greeting
+                    </h2>
+
+                    <p>
+                        Enter your name to generate a personalized message.
+                    </p>
+
+                    <div class="input-wrapper">
+
+                        <input
+                            type="text"
+                            id="nameInput"
+                            placeholder="Enter your name"
+                            autocomplete="off"
+                        >
+
+                        <button id="greetBtn" class="primary-btn">
+                            Greet
+                        </button>
+
+                    </div>
+
+                    <p id="greeting" class="greeting"></p>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dark Mode -->
+            <article class="card tilt-card">
+
+                <div class="card-icon">
+                    🌙
+                </div>
+
+                <div class="card-content">
+
+                    <span class="card-label">
+                        THEME TOGGLE
+                    </span>
+
+                    <h2>
+                        Appearance
+                    </h2>
+
+                    <p>
+                        Switch between light and dark visual themes.
+                    </p>
+
+                    <div class="theme-preview">
+
+                        <div class="preview-dot"></div>
+
+                        <span id="themeStatus">
+                            Light Mode
+                        </span>
+
+                    </div>
+
+                    <button id="themeBtn" class="primary-btn">
+                        Enable Dark Mode
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- Interaction status -->
+        <section class="status-panel">
+
+            <div class="status-dot"></div>
+
+            <div>
+                <strong>JavaScript Active</strong>
+                <p id="statusText">
+                    Waiting for interaction...
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <div class="footer-line"></div>
+
+            <p>
+                FRONTEND DEVELOPMENT • PROJECT 3
+            </p>
+
+            <span>
+                Built with HTML • CSS • JavaScript
+            </span>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
